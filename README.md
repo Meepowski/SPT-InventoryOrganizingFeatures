@@ -6,4 +6,6 @@ I added recursive sort functionality to organize containers inside other contain
 ## Credits
 
 - Original mod made by Nightingale
-- Updated to 3.8.3 by seionmoya
+- Updated to 3.8.3 by seionmoya/DeadLeaves
+- Support for recursive container sorting added by aerde/Yume
+- Updated to 3.9.0 by Meepowski
