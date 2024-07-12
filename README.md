@@ -1,7 +1,7 @@
 # Inventory Organizing Features
 
 Mod for organizing items in stash and containers in SPT.
-I added recursive sort functionality to organize containers inside other containers.
+Original mod: https://hub.sp-tarkov.com/files/file/1152-inventory-organizing-features/
 
 ## Credits
 
