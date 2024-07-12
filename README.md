@@ -1,6 +1,7 @@
 # Inventory Organizing Features
 
 Mod for organizing items in stash and containers in SPT.
+
 Original mod: https://hub.sp-tarkov.com/files/file/1152-inventory-organizing-features/
 
 ## Credits
