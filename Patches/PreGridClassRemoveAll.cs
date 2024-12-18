@@ -19,7 +19,7 @@ namespace Seion.Iof.Patches
         {
             // Find the Grid class (Per STP-AKI 3.5.5 it's a GClass2166)
 
-            var gridClassMethods = new string[] { "FindItem", "GetItemsInRect", "FindLocationForItem", "Add", "AddItemWithoutRestrictions", "Remove", "RemoveAll", "CanReplace" };
+            var gridClassMethods = new string[] { "GetItemsInRect", "FindLocationForItem", "Add", "AddItemWithoutRestrictions", "Remove", "RemoveAll", "CanReplace" };
             return AccessTools.Method(ReflectionHelper.FindClassTypeByMethodNames(gridClassMethods), "RemoveAll");
 
             //return typeof(Class1966).GetMethod(nameof(Class1966.RemoveAll));
@@ -31,7 +31,7 @@ namespace Seion.Iof.Patches
         private static bool PatchPrefix(ref object __instance)
         {
             // Dynamically find static SortClass
-            var sortClassMethods = new string[] { "Sort", "ApplyItemToRevolverDrum", "ApplySingleItemToAddress", "Fold", "CanRecode", "CanFold" };
+            var sortClassMethods = new string[] { "ApplyItemToRevolverDrum", "ApplySingleItemToAddress", "Fold", "CanRecode", "CanFold" };
             var sortClassType = ReflectionHelper.FindClassTypeByMethodNames(sortClassMethods);
 
             var callerClassType = new StackTrace().GetFrame(2).GetMethod().ReflectedType;

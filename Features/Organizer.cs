@@ -18,16 +18,16 @@ namespace Seion.Iof.Features
 
         public static Handbook Handbook { get; set; } = null;
 
-        public static void Organize(LootItemClass topLevelItem, InventoryControllerClass controller)
+        public static void Organize(CompoundItem topLevelItem, InventoryController controller)
         {
             OrganizeRecursive(topLevelItem, controller);
         }
 
-        private static void OrganizeRecursive(LootItemClass currentItem, InventoryControllerClass controller)
+        private static void OrganizeRecursive(CompoundItem currentItem, InventoryController controller)
         {
             foreach (var grid in currentItem.Grids)
             {
-                var organizedContainers = grid.Items.Where(IsOrganized).Select(item => new OrganizedContainer((LootItemClass)item, currentItem, controller)).ToList();
+                var organizedContainers = grid.Items.Where(IsOrganized).Select(item => new OrganizedContainer((CompoundItem)item, currentItem, controller)).ToList();
                 organizedContainers.Sort();
                 foreach (var container in organizedContainers)
                 {
@@ -35,7 +35,7 @@ namespace Seion.Iof.Features
                     container.Organize();
 
                     // Recursively organize containers inside this container
-                    OrganizeRecursive((LootItemClass)container.TargetItem, controller);
+                    OrganizeRecursive((CompoundItem)container.TargetItem, controller);
                 }
             }
         }

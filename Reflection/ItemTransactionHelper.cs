@@ -17,10 +17,8 @@ namespace Seion.Iof.Reflection
                 "TransferOrMerge",
                 "TransferMax",
                 "Merge",
-                "ApplyItemToRevolverDrum",
                 "ApplySingleItemToAddress",
                 "Fold",
-                "CanRecode",
                 "CanFold"
             };
             ReflectedType = ReflectionHelper.FindClassTypeByMethodNames(classMethods);

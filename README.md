@@ -10,3 +10,4 @@ Original mod: https://hub.sp-tarkov.com/files/file/1152-inventory-organizing-fea
 - Updated to 3.8.3 by seionmoya/DeadLeaves
 - Support for recursive container sorting added by aerde/Yume
 - Updated to 3.9.0 by Meepowski
+- Updated to 3.10.0 by KyoMiko
