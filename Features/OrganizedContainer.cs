@@ -23,9 +23,9 @@ namespace Seion.Iof.Features
         public const string OrderParamPrefix = "#:";
 
         public string[] Params { get; }
-        public LootItemClass TargetItem { get; }
-        public InventoryControllerClass Controller { get; }
-        public LootItemClass SourceItem { get; }
+        public CompoundItem TargetItem { get; }
+        public InventoryController Controller { get; }
+        public CompoundItem SourceItem { get; }
         public List<Item> ValidItems
         {
             get
@@ -55,7 +55,7 @@ namespace Seion.Iof.Features
             }
         }
 
-        public OrganizedContainer(LootItemClass targetItem, LootItemClass sourceItem, InventoryControllerClass controller)
+        public OrganizedContainer(CompoundItem targetItem, CompoundItem sourceItem, InventoryController controller)
         {
             TargetItem = targetItem;
             Controller = controller;
