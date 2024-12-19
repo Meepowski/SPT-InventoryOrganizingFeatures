@@ -31,7 +31,7 @@ namespace Seion.Iof.Patches
         private static bool PatchPrefix(ref object __instance)
         {
             // Dynamically find static SortClass
-            var sortClassMethods = new string[] { "ApplyItemToRevolverDrum", "ApplySingleItemToAddress", "Fold", "CanRecode", "CanFold" };
+            var sortClassMethods = new string[] { "Sort", "ApplySingleItemToAddress", "Fold", "CanFold" };
             var sortClassType = ReflectionHelper.FindClassTypeByMethodNames(sortClassMethods);
 
             var callerClassType = new StackTrace().GetFrame(2).GetMethod().ReflectedType;
